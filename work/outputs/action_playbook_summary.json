@@ -1,0 +1,34 @@
+{
+  "portfolio_size": 30000,
+  "actionable_queue_size": 21120,
+  "no_go_volume": 8880,
+  "action_distribution": {
+    "DO_NOT_AUTOMATE": 8880,
+    "TITLE_SNIPPET_OPTIMIZATION": 5997,
+    "REFRESH_AUTHORITY_EXPANSION": 3322,
+    "SCHEDULED_REVIEW": 3238,
+    "TECHNICAL_AND_CONTENT_AUDIT": 2958,
+    "MONITOR_AND_PROTECT": 2948,
+    "COMPREHENSIVE_CONTENT_REFRESH": 2207,
+    "MANDATORY_HUMAN_AUDIT": 450
+  },
+  "archetype_distribution": {
+    "NO_GO_INSUFFICIENT_VOLUME": 8880,
+    "PAGE_1_CTR_DEFICIT": 5997,
+    "STRIKING_DISTANCE_DECAY": 3322,
+    "LOW_PRIORITY_MAINTENANCE": 3238,
+    "RAPID_TRAFFIC_EROSION": 2958,
+    "STABLE_CORE_PERFORMER": 2948,
+    "STALE_EVERGREEN_SLIP": 2207,
+    "NO_GO_MANUAL_EDITORIAL": 450
+  },
+  "top_100_estimated_review_hours": 95.0,
+  "monitoring_psi_impressions": 0.7388,
+  "model_holdout_prauc": 0.6453,
+  "claim_vocabulary": [
+    "observed",
+    "measured",
+    "directional",
+    "decision-support"
+  ]
+}

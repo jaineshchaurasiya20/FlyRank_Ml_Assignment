@@ -1,0 +1,19 @@
+{
+  "dataset_rows": 30000,
+  "base_rate_decline": 0.5421,
+  "precision_at_10": 0.5,
+  "precision_at_20": 0.4,
+  "precision_at_50": 0.38,
+  "precision_at_100": 0.39,
+  "top_score": 0.9921,
+  "median_score": 0.473,
+  "action_distribution_top_100": {
+    "refresh": 96,
+    "refresh_and_review_ctr": 4
+  },
+  "reason_distribution_top_100": {
+    "striking_distance_opportunity": 95,
+    "low_ctr_visible_page": 4,
+    "stale_high_demand": 1
+  }
+}

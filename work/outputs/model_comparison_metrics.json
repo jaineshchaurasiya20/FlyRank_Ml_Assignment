@@ -1,0 +1,51 @@
+{
+  "test_rows": 2325,
+  "test_base_rate": 0.391,
+  "models": {
+    "Baseline Hand Rule (W4)": {
+      "Precision@20": 0.25,
+      "Precision@50": 0.22,
+      "Precision@100": 0.29,
+      "ROC-AUC": 0.626201108811446,
+      "PR-AUC": 0.4700334663576241,
+      "Accuracy": 0.610752688172043,
+      "F1": 0.3301258327165063
+    },
+    "Logistic Regression": {
+      "Precision@20": 0.45,
+      "Precision@50": 0.34,
+      "Precision@100": 0.45,
+      "ROC-AUC": 0.7004841727110565,
+      "PR-AUC": 0.5280387508926172,
+      "Accuracy": 0.6739784946236559,
+      "F1": 0.5702947845804989
+    },
+    "Decision Tree (depth=5)": {
+      "Precision@20": 0.8,
+      "Precision@50": 0.68,
+      "Precision@100": 0.65,
+      "ROC-AUC": 0.7415203737887913,
+      "PR-AUC": 0.5753189989001579,
+      "Accuracy": 0.6765591397849462,
+      "F1": 0.6338851022395326
+    },
+    "Random Forest": {
+      "Precision@20": 0.85,
+      "Precision@50": 0.84,
+      "Precision@100": 0.8,
+      "ROC-AUC": 0.7576595936429801,
+      "PR-AUC": 0.6452791459283397,
+      "Accuracy": 0.6666666666666666,
+      "F1": 0.6325272641062115
+    },
+    "Gradient Boosting": {
+      "Precision@20": 0.95,
+      "Precision@50": 0.86,
+      "Precision@100": 0.85,
+      "ROC-AUC": 0.7753308876085349,
+      "PR-AUC": 0.6771965369620737,
+      "Accuracy": 0.6735483870967742,
+      "F1": 0.6464834653004192
+    }
+  }
+}

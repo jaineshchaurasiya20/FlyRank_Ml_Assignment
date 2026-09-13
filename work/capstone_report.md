@@ -179,3 +179,33 @@ pip install -r requirements.txt
 This research was conducted as part of the **FlyRank AI Machine Learning Internship (Summer 2026)**. 
 
 Built on the **FlyRank ML Internship dataset**, provided by [FlyRank AI](https://flyrank.ai/). We thank the FlyRank engineering team for providing access to the pseudonymized enterprise search warehouse and benchmark releases.
+
+---
+
+## 10. ML-12 Capstone Showcase & Communication Cuts
+
+### A. 5-Minute Technical Demo Outline (Week-8 Showcase Presentation)
+- **0:00 - 1:00 (The Question & The FlyRank Content Problem):** Why organic search decay is invisible until clicks crash. How FlyRank's hand-crafted rules (`health_score`, staleness thresholds) misallocate scarce editorial hours by flagging stale pages that are actually ranking stably.
+- **1:00 - 2:00 (The Data & Leakage Trap):** Demonstrating the 78.8M+ warehouse daily performance grain and how naive random splits inflate performance by allowing models to memorize client domain authority. Our strict client-holdout split and leakage defense (`trend_pct` excluded).
+- **2:00 - 3:15 (Model vs Baseline - One Honest Chart):** Walking through the comparative results on unseen client domains: Gradient Boosting raises Precision@50 from 22.0% (heuristic rule) to 86.0% (a 3.9x precision lift over baseline and well above the 39.1% holdout base rate). The measured generalization gap (-0.1368 PR-AUC drop).
+- **3:15 - 4:15 (The Content Action Playbook):** Live walkthrough of our operational priority queue. Demonstrating how model probabilities map into concrete archetypes: `TITLE_SNIPPET_OPTIMIZATION` (quick-win Page-1 CTR deficits), `REFRESH_AUTHORITY_EXPANSION` (striking-distance decay), and strict no-go automation guardrails.
+- **4:15 - 5:00 (Limits, Economics, & Retrain Tripwires):** Stating what the model cannot claim (no causal guarantees; 29.6% low-volume truncation) and showing our PSI drift tripwire (0.7388 alert) with an estimated 95.0 total editorial review hours for the top-100 queue.
+
+---
+
+### B. Social-Post Cut (LinkedIn / X Summary)
+> **Can ML predict organic search decay before traffic collapses?**
+>
+> Over 90 days, we analyzed 30,000 pages across 32 enterprise domains using FlyRank's 79M+ search console warehouse. The finding: standard heuristic rules fail on unseen sites (Precision@50 = 22.0%).
+>
+> By training a Gradient Boosted model evaluated under a strict client-holdout split, we achieved an observed Precision@50 of 86.0% and PR-AUC of 0.6772—nearly 4x higher triage accuracy.
+>
+> More importantly: raw predictions don't edit articles. We translated the model into a Content Action Playbook that maps URLs into concrete workflows (Title optimizations, striking-distance expansions, and a strict no-go automation list).
+>
+> Full interactive paper & reproducible code: https://jaineshchaurasiya20.github.io/FlyRank_Ml_Assignment/
+
+---
+
+### C. Employer-Facing 3-Sentence Summary
+I engineered an end-to-end ML decay prioritization pipeline and Content Action Playbook trained on FlyRank's 79M-row search performance dataset across 32 client domains. By implementing an honest client-holdout validation harness that eliminated target leakage and domain-identity memorization, my Gradient Boosted model delivered an observed Precision@50 of 86.0% on unseen domains (a 3.9x improvement over the heuristic rule baseline). I translated these predictions into a production-ready decision-support system featuring automated reason codes, cost-benefit labor estimations, and drift tripwires.
+

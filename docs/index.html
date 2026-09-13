@@ -869,10 +869,43 @@ work/notebooks/capstone.ipynb                # Synthesis research notebook</code
       </div>
     </section>
 
-    <!-- 8. Acknowledgments & Data Credit (Mandatory Section 8/9) -->
+    <!-- 8. ML-12 Capstone Showcase & Communication Cuts -->
+    <section>
+      <h2>8. Capstone Showcase & Communication Cuts</h2>
+      <p>
+        Translating empirical research into career opportunities requires communicating findings to diverse audiences—engineers, executives, and technical recruiters.
+      </p>
+
+      <h3>A. 5-Minute Technical Demo Outline (Week-8 Showcase Presentation)</h3>
+      <div class="alert-box alert-info">
+        <ul style="margin-left:20px; line-height:1.8;">
+          <li><strong>0:00 – 1:00 (The Problem & FlyRank Context):</strong> Why search traffic decay is invisible until clicks crash. How FlyRank's hand-crafted rules (<code>health_score</code>, staleness thresholds) misallocate scarce editorial hours by flagging stale pages that are actually ranking stably.</li>
+          <li><strong>1:00 – 2:00 (The Data & Leakage Trap):</strong> Demonstrating the 78.8M+ warehouse daily performance grain and how naive random splits inflate performance by allowing models to memorize client domain authority. Our strict client-holdout split and leakage defense (<code>trend_pct</code> excluded).</li>
+          <li><strong>2:00 – 3:15 (Model vs Baseline - One Honest Chart):</strong> Walking through the comparative results on unseen client domains: Gradient Boosting raises Precision@50 from 22.0% (heuristic rule) to 86.0% (a 3.9x precision lift over baseline and well above the 39.1% holdout base rate). The measured generalization gap (-0.1368 PR-AUC drop).</li>
+          <li><strong>3:15 – 4:15 (The Content Action Playbook):</strong> Live walkthrough of our operational priority queue. Demonstrating how model probabilities map into concrete archetypes: <code>TITLE_SNIPPET_OPTIMIZATION</code> (quick-win Page-1 CTR deficits), <code>REFRESH_AUTHORITY_EXPANSION</code> (striking-distance decay), and strict no-go automation guardrails.</li>
+          <li><strong>4:15 – 5:00 (Limits, Economics, & Retrain Tripwires):</strong> Stating what the model cannot claim (no causal guarantees; 29.6% low-volume truncation) and showing our PSI drift tripwire (0.7388 alert) with an estimated 95.0 total editorial review hours for the top-100 queue.</li>
+        </ul>
+      </div>
+
+      <h3>B. Shareable Social-Post Cut (LinkedIn / X Summary)</h3>
+      <div class="alert-box alert-safe" style="font-family: var(--font-mono); font-size: 0.9rem;">
+        <strong>Can ML predict organic search decay before traffic collapses?</strong><br><br>
+        Over 90 days, we analyzed 30,000 pages across 32 enterprise domains using FlyRank's 79M+ search console warehouse. The finding: standard heuristic rules fail on unseen sites (Precision@50 = 22.0%).<br><br>
+        By training a Gradient Boosted model evaluated under a strict client-holdout split, we achieved an observed Precision@50 of 86.0% and PR-AUC of 0.6772—nearly 4x higher triage accuracy.<br><br>
+        More importantly: raw predictions don't edit articles. We translated the model into a Content Action Playbook that maps URLs into concrete workflows (Title optimizations, striking-distance expansions, and a strict no-go automation list).<br><br>
+        Full interactive paper &amp; reproducible code: <a href="https://jaineshchaurasiya20.github.io/FlyRank_Ml_Assignment/" style="color:#6ee7b7;">https://jaineshchaurasiya20.github.io/FlyRank_Ml_Assignment/</a>
+      </div>
+
+      <h3>C. Employer-Facing 3-Sentence Summary</h3>
+      <div class="alert-box alert-warning">
+        <em>"I engineered an end-to-end ML decay prioritization pipeline and Content Action Playbook trained on FlyRank's 79M-row search performance dataset across 32 client domains. By implementing an honest client-holdout validation harness that eliminated target leakage and domain-identity memorization, my Gradient Boosted model delivered an observed Precision@50 of 86.0% on unseen domains (a 3.9x improvement over the heuristic rule baseline). I translated these predictions into a production-ready decision-support system featuring automated reason codes, cost-benefit labor estimations, and drift tripwires."</em>
+      </div>
+    </section>
+
+    <!-- 9. Acknowledgments & Data Credit (Mandatory Section) -->
     <footer>
       <div class="credit-box">
-        <h3 style="margin-top:0; margin-bottom:8px; color:#f8fafc;">8. Acknowledgments & Data Credit</h3>
+        <h3 style="margin-top:0; margin-bottom:8px; color:#f8fafc;">9. Acknowledgments & Data Credit</h3>
         <p style="margin-bottom:0; font-size:1.05rem;">
           Built on the <strong>FlyRank ML Internship dataset</strong>, provided with appreciation by <a href="https://flyrank.ai/" target="_blank" rel="noopener">FlyRank AI</a>.
         </p>

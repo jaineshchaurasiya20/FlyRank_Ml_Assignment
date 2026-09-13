@@ -1,0 +1,23 @@
+{
+  "split_design": "client_holdout",
+  "held_out_clients": [
+    "client_0b918943df",
+    "client_1a6562590e",
+    "client_98a3ab7c34",
+    "client_f74efabef1",
+    "client_d4735e3a26",
+    "client_4fc82b26ae"
+  ],
+  "held_out_rows": 2325,
+  "naive_random_split_prauc": 0.7821090654290691,
+  "honest_client_split_prauc": 0.6452791459283397,
+  "generalization_gap_prauc": 0.1368,
+  "honest_precision_at_50": 0.84,
+  "leakage_audit_passed": true,
+  "claim_vocabulary_verified": [
+    "observed",
+    "measured",
+    "directional",
+    "decision-support"
+  ]
+}
